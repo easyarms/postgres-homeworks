@@ -13,7 +13,7 @@ try:
             for row in csvreader:
                 cur = conn.cursor()
                 cur.execute(
-                    "INSERT INTO employees (first_name, last_name, title, birth_date, notes) "
+                    "INSERT INTO employees (first_name, last_name, title, birth_date, notes)"
                     "VALUES (%s, %s, %s, %s, %s)",
                     (row[0], row[1], row[2], row[3], row[4])
                 )
@@ -34,7 +34,7 @@ try:
             for row in csvreader:
                 cur = conn.cursor()
                 cur.execute(
-                    "INSERT INTO orders (order_id, customer_id, employee_id, order_date, ship_city) "
+                    "INSERT INTO orders (order_id, customer_id, employee_id, order_date, ship_city)"
                     "VALUES (%s, %s, %s, %s, %s)",
                     (row[0], row[1], row[2], row[3], row[4])
                 )
